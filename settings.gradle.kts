@@ -1,5 +1,10 @@
 pluginManagement {
+    includeBuild("build-logic") // Our Gradle module for multi-module management!
     repositories {
+        /**
+         * google() would work fine, but these regexes
+         * optimize gradle lookups.
+         */
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -19,5 +24,11 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Multi Module Template"
+rootProject.name = "MultiModuleTemplate"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS") // Enables referencing project modules in a type-safe manner (rather than strings) in gradle files
 include(":app")
+include(":core:presentation:designsystem")
+include(":core:presentation:ui")
+include(":core:domain")
+include(":core:data")
+include(":core:database")
