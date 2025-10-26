@@ -70,6 +70,11 @@ androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-
 # Coroutines
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
 
+# Database
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+
 # Dependency Injection (Choose one: HILT or KOIN)
 # HILT
 #androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
@@ -109,6 +114,10 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# Room
+room = { id = "androidx.room", version.ref = "room" }
 
 #hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
 
@@ -118,6 +127,8 @@ multimoduletemplate-android-application-compose = { id = "multimoduletemplate.an
 multimoduletemplate-android-library = { id = "multimoduletemplate.android.library", version = "unspecified" }
 multimoduletemplate-android-library-compose = { id = "multimoduletemplate.android.library.compose", version = "unspecified" }
 multimoduletemplate-android-feature-ui = { id = "multimoduletemplate.android.feature.ui", version = "unspecified" }
+multimoduletemplate-android-room = { id = "multimoduletemplate.android.room", version = "unspecified" }
+multimoduletemplate-jvm-library = { id = "multimoduletemplate.jvm.library", version = "unspecified" }
 
 [bundles]
 compose = [

@@ -4,10 +4,6 @@ plugins {
 
 android {
     namespace = "com.ryanphillips.multimoduletemplate"
-
-    defaultConfig {
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
 }
 
 dependencies {

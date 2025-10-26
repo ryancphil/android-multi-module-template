@@ -24,15 +24,17 @@ class AndroidApplicationConventionPlugin: Plugin<Project> {
              * Our `compileOnly` gradle dependencies in
              * build.gradle.kts(:build-logic) give us access to
              * this.
+             * This block is basically the equivalent
+             * of the `android` block in `build.gradle.kts(:app)`
              */
             extensions.configure<ApplicationExtension> {
-                // This block is basically equivalent to the `android` block
-                // in `build.gradle.kts(:app)`
                 defaultConfig {
                     applicationId = libs.findVersion("projectApplicationId").get().toString()
                     targetSdk = libs.findVersion("projectTargetSdkVersion").get().toString().toInt()
                     versionCode = libs.findVersion("projectVersionCode").get().toString().toInt()
                     versionName = libs.findVersion("projectVersionName").get().toString()
+
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                 }
                 configureKotlinAndroid(this)
                 configureBuildTypes(

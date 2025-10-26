@@ -10,7 +10,7 @@ import org.gradle.kotlin.dsl.configure
 
 /**
  * Build Type Configuration
- * (debug and release by default, but we could add more).
+ * ("debug" and "release" by default, but we could add more (eg. QA)).
  */
 internal fun Project.configureBuildTypes(
     commonExtension: CommonExtension<*,*,*,*,*,*>,

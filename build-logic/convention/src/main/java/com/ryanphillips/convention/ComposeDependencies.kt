@@ -8,8 +8,8 @@ import org.gradle.kotlin.dsl.project
  * This extension function allows us to specify the dependencies needed for
  * any feature's presentation layer.
  * We will always depend on our own core:presentation modules, but
- * this example also implements dependency injection with Koin (could be replaced with HILT) &
- * other compose dependencies that have been bundled in our version catalog.
+ * this example also implements dependency injection with Koin (could be replaced with HILT)
+ * as well as other Compose dependencies (bundled in our version catalog for convenience).
  */
 fun DependencyHandlerScope.addUiLayerDependencies(project: Project) {
     "implementation"(project(":core:presentation:ui"))

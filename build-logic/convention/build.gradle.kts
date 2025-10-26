@@ -1,6 +1,6 @@
 /**
- * This build-logic "included build" (see root `settings.gradle.kts`) is used
- * to simplify gradle configuration and management for multi-module projects.
+ * This build-logic module is an "included build" (see root `settings.gradle.kts`)
+ * And is used to simplify gradle configuration and management for multi-module projects.
  */
 plugins {
     `kotlin-dsl`
@@ -18,7 +18,10 @@ dependencies {
 }
 
 /**
- * This is where we register our convention plugins.
+ * This is where we register our convention plugins with gradle.
+ * Ensure that:
+ * * ID matches in our libs.versions.toml &
+ * * Implementation Class matches the name of the Convention Plugin class.
  */
 gradlePlugin {
     plugins {
@@ -41,6 +44,14 @@ gradlePlugin {
         register("androidFeatureUi") {
             id = "multimoduletemplate.android.feature.ui"
             implementationClass = "AndroidFeatureUiConventionPlugin"
+        }
+        register("androidRoom") {
+            id = "multimoduletemplate.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = "multimoduletemplate.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }
