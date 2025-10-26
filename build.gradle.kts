@@ -8,4 +8,5 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false // JvmLibraryConventionPlugin
     alias(libs.plugins.ksp) apply false // AndroidRoomConventionPlugin
     alias(libs.plugins.room) apply false // AndroidRoomConventionPlugin
+    alias(libs.plugins.kotlin.serialization) apply false // JvmKtorConventionPlugin
 }

@@ -20,7 +20,7 @@ dependencies {
 /**
  * This is where we register our convention plugins with gradle.
  * Ensure that:
- * * ID matches in our libs.versions.toml &
+ * * ID matches in our [plugins] section of libs.versions.toml &
  * * Implementation Class matches the name of the Convention Plugin class.
  */
 gradlePlugin {
@@ -52,6 +52,10 @@ gradlePlugin {
         register("jvmLibrary") {
             id = "multimoduletemplate.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
+        }
+        register("jvmKtor") {
+            id = "multimoduletemplate.jvm.ktor"
+            implementationClass = "JvmKtorConventionPlugin"
         }
     }
 }

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.multimoduletemplate.android.application.compose)
+    alias(libs.plugins.multimoduletemplate.jvm.ktor)
 }
 
 android {
