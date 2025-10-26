@@ -14,6 +14,16 @@ jetbrainsKotlinJvm = "2.2.21"
 coroutines = "1.10.2"
 ksp = "1.9.22-1.0.17"
 room = "2.8.3"
+desugar_jdk_libs = "2.1.5"
+
+# Project Versions
+projectApplicationId = "com.ryanphillips.multimoduletemplate"
+projectVersionName = "1.0"
+projectMinSdkVersion = "30"
+projectTargetSdkVersion = "36"
+projectCompileSdkVersion = "36"
+projectVersionCode = "1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +42,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -46,6 +57,8 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+# Convention Plugins
+multimoduletemplate-android-application = { id = "multimoduletemplate.android.application", version = "unspecified" }
 
 #[bundles]
 # Used if you wanted to bundle groups of dependencies eg. ktor
