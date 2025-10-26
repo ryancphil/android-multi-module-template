@@ -9,6 +9,7 @@ group = "com.ryanphillips.multimoduletemplate.buildlogic"
 
 dependencies {
     // These are only needed at compile time for gradle building
+    // and allow access to the apis we use in our convention plugins.
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -16,11 +17,18 @@ dependencies {
     compileOnly(libs.room.gradlePlugin)
 }
 
+/**
+ * This is where we register our convention plugins.
+ */
 gradlePlugin {
     plugins {
         register("androidApplication") {
             id = "multimoduletemplate.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("androidApplicationCompose") {
+            id = "multimoduletemplate.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
     }
 }

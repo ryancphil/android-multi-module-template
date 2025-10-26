@@ -9,11 +9,10 @@ import org.gradle.kotlin.dsl.configure
 
 /**
  * Our first convention plugin where we are configuring
- * everything we need for an Android application that was
+ * the critical things needed for an Android application that was
  * previously configured directly in `build.gradle.kts(:app)`
  */
 class AndroidApplicationConventionPlugin: Plugin<Project> {
-
     override fun apply(target: Project) {
         target.run {
             pluginManager.run {

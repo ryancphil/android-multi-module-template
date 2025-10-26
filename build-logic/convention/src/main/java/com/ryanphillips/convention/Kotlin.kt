@@ -8,7 +8,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 /**
- * These are the specific options for Kotlin based Android things......
+ * Kotlin Android specific configuration.
  */
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*,*,*,*,*,*>
@@ -32,6 +32,6 @@ internal fun Project.configureKotlinAndroid(
     }
 
     dependencies {
-        add("coreLibraryDesugaring", libs.findLibrary("desugar-jdk-libs").get())
+        add("coreLibraryDesugaring", libs.findLibrary("desugar.jdk.libs").get())
     }
 }

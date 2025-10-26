@@ -8,6 +8,10 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 
+/**
+ * Build Type Configuration
+ * (debug and release by default, but we could add more).
+ */
 internal fun Project.configureBuildTypes(
     commonExtension: CommonExtension<*,*,*,*,*,*>,
     extensionType: ExtensionType
