@@ -13,7 +13,8 @@ class AndroidApplicationComposeConventionPlugin: Plugin<Project> {
             /**
              * Every Compose module is an Android App Module, but not vice-versa.
              * So we apply our Android Application Convention Plugin here via its ID,
-             * and define the Compose Convention plugin separately to leverage modularity.
+             * and define this Compose Convention plugin separately to leverage modularity,
+             * while getting all the config from our Android Application Convention Plugin.
              */
             pluginManager.apply("multimoduletemplate.android.application")
             pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
