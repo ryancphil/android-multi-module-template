@@ -34,5 +34,9 @@ gradlePlugin {
             id = "multimoduletemplate.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = "multimoduletemplate.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
     }
 }

@@ -61,6 +61,7 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrai
 multimoduletemplate-android-application = { id = "multimoduletemplate.android.application", version = "unspecified" }
 multimoduletemplate-android-application-compose = { id = "multimoduletemplate.android.application.compose", version = "unspecified" }
 multimoduletemplate-android-library = { id = "multimoduletemplate.android.library", version = "unspecified" }
+multimoduletemplate-android-library-compose = { id = "multimoduletemplate.android.library.compose", version = "unspecified" }
 
 #[bundles]
 # Used if you wanted to bundle groups of dependencies eg. ktor
